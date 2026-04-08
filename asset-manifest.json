@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/musicweb/static/css/main.911dd566.css",
+    "main.js": "/musicweb/static/js/main.ca396cdf.js",
+    "static/media/heavy.mp3": "/musicweb/static/media/heavy.fedd602301b994cd40d8.mp3",
+    "static/media/bg-img.jpg": "/musicweb/static/media/bg-img.119a44c8b4f0cf77db2e.jpg",
+    "static/media/diet-mountain-dew.mp3": "/musicweb/static/media/diet-mountain-dew.f8496dd62671a4a2b9cd.mp3",
+    "static/media/holding-me-back.mp3": "/musicweb/static/media/holding-me-back.e0c2a8738825a3cebf0c.mp3",
+    "static/media/cap.jpeg": "/musicweb/static/media/cap.7ac12af9444db18a92aa.jpeg",
+    "static/media/hoodie.jpeg": "/musicweb/static/media/hoodie.24c02fc0cec556387741.jpeg",
+    "static/media/crop-top.jpeg": "/musicweb/static/media/crop-top.31bbb3626a74a50e70b2.jpeg",
+    "static/media/sweatshirt.jpeg": "/musicweb/static/media/sweatshirt.a377cfa00936aba3ea20.jpeg",
+    "index.html": "/musicweb/index.html",
+    "main.911dd566.css.map": "/musicweb/static/css/main.911dd566.css.map",
+    "main.ca396cdf.js.map": "/musicweb/static/js/main.ca396cdf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.911dd566.css",
+    "static/js/main.ca396cdf.js"
+  ]
+}
