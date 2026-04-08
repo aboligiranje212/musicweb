@@ -1,0 +1,726 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #141414, #050505);
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+section {
+  padding: 100px 8%;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 1px;
+}
+
+/* ===== NAVBAR ===== */
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ff4d6d;
+}
+
+/* REMOVE DEFAULT LIST STYLES */
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* LINK BUTTON STYLE */
+.navbar li a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #ddd;
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.navbar li a:hover {
+  color: #ff4d6d;
+  border: 1px solid #ff4d6d;
+  background: rgba(255, 77, 109, 0.08);
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.95)),
+    url(./assets/merch/bg-img.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+.btn-style {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 60px;
+  border: 2px solid #ff4d6d;
+  color: #ff4d6d;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.btn-style:hover {
+  background: #ff4d6d;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===== ABOUT ===== */
+.about {
+  max-width: 900px;
+}
+
+.about h3 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  color: #aaa;
+  font-size: 1.05rem;
+}
+
+/* ===== MUSIC ===== */
+.music h3 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.track {
+  background: linear-gradient(180deg, #111, #0b0b0b);
+  padding: 40px 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.track:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+.track h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.track p {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.track audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ===== CUSTOM MUSIC PLAYER ===== */
+
+.track h4 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.track p {
+  color: #999;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.play-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(255, 77, 109, 0.4);
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #ff4d6d, #ff758f);
+  transition: width 0.2s linear;
+}
+
+/* Hide native audio */
+audio {
+  display: none;
+}
+
+/* ===== SHOWS ===== */
+.shows {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+}
+
+.shows h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.shows p {
+  color: #bbb;
+}
+
+.tours {
+  padding: 100px 8%;
+}
+
+.tours-title {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.tours-subtitle {
+  color: #aaa;
+  margin-bottom: 60px;
+  font-size: 1rem;
+}
+
+.tour-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.tour-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #111, #0b0b0b);
+  padding: 28px 32px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+.tour-date {
+  text-align: center;
+  min-width: 70px;
+}
+
+.tour-date span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff4d6d;
+}
+
+.tour-date small {
+  display: block;
+  font-size: 0.7rem;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.tour-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.tour-info p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.tour-btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: 1px solid #ff4d6d;
+  background: transparent;
+  color: #ff4d6d;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.tour-btn:hover {
+  background: #ff4d6d;
+  color: #000;
+}
+/* ===== CONTACT ===== */
+/* ===== CONTACT PAGE ===== */
+.contact-page {
+  max-width: 700px;
+  margin: 120px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contact-page h3 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.contact-page p {
+  color: #aaa;
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #0e0e0e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 16px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff4d6d;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 14px;
+  background: #ff4d6d;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 77, 109, 0.4);
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact h3 {
+  font-size: 2.3rem;
+}
+
+.contact button {
+  margin-top: 30px;
+  padding: 14px 44px;
+  border-radius: 40px;
+  border: 1px solid #ff4d6d;
+  background: transparent;
+  color: #ff4d6d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  background: #ff4d6d;
+  color: #000;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 25px;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #050505;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 60px 8% 30px;
+  color: #aaa;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand h2 {
+  color: #ff4d6d;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #888;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #aaa;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff4d6d;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-social a {
+  color: #aaa;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ff4d6d;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-btn a {
+  text-decoration: none; /* removes underline */
+  color: inherit; /* uses button text color */
+  display: inline-block;
+}
+
+/* ===== BOOKING FORM ===== */
+
+.booking {
+  min-height: 100vh;
+  padding: 120px 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-title {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.booking-subtitle {
+  color: #aaa;
+  margin-bottom: 50px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.booking-form {
+  width: 100%;
+  max-width: 480px;
+  background: linear-gradient(180deg, #111, #0b0b0b);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.form-group input,
+.form-group select {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: 1px solid #ff4d6d;
+}
+
+.booking-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.booking-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(255, 77, 109, 0.4);
+}
+
+/* ===== MERCH ===== */
+.merch h3 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.merch-card {
+  background: linear-gradient(180deg, #111, #0b0b0b);
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.merch-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.merch-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.merch-card h4 {
+  margin: 20px 0 8px;
+  font-size: 1.1rem;
+}
+
+.merch-card span {
+  display: block;
+  color: #ff4d6d;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.merch-btn {
+  padding: 10px 26px;
+  background: transparent;
+  border: 1px solid #ff4d6d;
+  color: #ff4d6d;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.merch-btn:hover {
+  background: #ff4d6d;
+  color: #000;
+}
+
+/* ===== CART ===== */
+.cart {
+  padding: 100px 8%;
+}
+
+.cart h3 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.cart-items {
+  display: grid;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.cart-card {
+  display: flex;
+  gap: 20px;
+  background: #0b0b0b;
+  padding: 20px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.cart-card img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.cart-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cart-controls button {
+  background: #ff4d6d;
+  border: none;
+  color: #000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.checkout-box {
+  background: #111;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-btn {
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #ff4d6d;
+  text-decoration: none;
+}
