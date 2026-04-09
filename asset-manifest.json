@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/musicweb/static/css/main.911dd566.css",
-    "main.js": "/musicweb/static/js/main.dec3d3e8.js",
+    "main.js": "/musicweb/static/js/main.2daf7381.js",
     "static/media/heavy.mp3": "/musicweb/static/media/heavy.fedd602301b994cd40d8.mp3",
     "static/media/bg-img.jpg": "/musicweb/static/media/bg-img.119a44c8b4f0cf77db2e.jpg",
     "static/media/diet-mountain-dew.mp3": "/musicweb/static/media/diet-mountain-dew.f8496dd62671a4a2b9cd.mp3",
@@ -12,10 +12,10 @@
     "static/media/sweatshirt.jpeg": "/musicweb/static/media/sweatshirt.a377cfa00936aba3ea20.jpeg",
     "index.html": "/musicweb/index.html",
     "main.911dd566.css.map": "/musicweb/static/css/main.911dd566.css.map",
-    "main.dec3d3e8.js.map": "/musicweb/static/js/main.dec3d3e8.js.map"
+    "main.2daf7381.js.map": "/musicweb/static/js/main.2daf7381.js.map"
   },
   "entrypoints": [
     "static/css/main.911dd566.css",
-    "static/js/main.dec3d3e8.js"
+    "static/js/main.2daf7381.js"
   ]
 }
