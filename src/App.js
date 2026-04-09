@@ -82,7 +82,7 @@ function App() {
 
       <Routes>
         <Route
-          path="/"
+          path="/musicweb"
           element={
             <>
               {/* HERO */}
