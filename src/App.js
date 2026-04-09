@@ -192,7 +192,7 @@ function App() {
             <h4>Quick Links</h4>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/musicweb">Home</Link>
               </li>
               <li>
                 <Link to="/music">Music</Link>
